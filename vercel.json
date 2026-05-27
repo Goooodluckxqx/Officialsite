@@ -1,12 +1,6 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "installCommand": "npm install --legacy-peer-deps",
+  "outputDirectory": "out",
   "buildCommand": "npm run build",
-  "outputDirectory": ".next"
+  "installCommand": "echo 'Skipping install for static export'"
 }
