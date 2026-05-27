@@ -1,6 +1,9 @@
 {
   "version": 2,
-  "outputDirectory": "out",
-  "buildCommand": "npm run build",
-  "installCommand": "echo 'Skipping install for static export'"
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ]
 }
