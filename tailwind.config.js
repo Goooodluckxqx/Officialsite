@@ -1,0 +1,55 @@
+module.exports = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'navy': {
+          50: '#f0f4f8',
+          100: '#d9e2ec',
+          200: '#bcccdc',
+          300: '#9fb3c8',
+          400: '#829ab1',
+          500: '#627d98',
+          600: '#486581',
+          700: '#334e68',
+          800: '#243b53',
+          900: '#102a43',
+          950: '#0a1929',
+        },
+        'sand': {
+          50: '#faf9f7',
+          100: '#f5f3ef',
+          200: '#e8e4dc',
+          300: '#d9d3c7',
+          400: '#c4bba8',
+          500: '#a89e8a',
+          600: '#8a7f6e',
+          700: '#6b6255',
+          800: '#4d463d',
+          900: '#2e2a25',
+        },
+        'warm': {
+          50: '#fdf8f3',
+          100: '#f9ede0',
+          200: '#f2d9c0',
+          300: '#e8bf96',
+          400: '#d9a06e',
+          500: '#c4844a',
+          600: '#a66a35',
+          700: '#855228',
+          800: '#633d1e',
+          900: '#422814',
+        },
+      },
+      fontFamily: {
+        'serif': ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+}
