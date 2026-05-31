@@ -9,7 +9,7 @@ const products = [
     tag: "标准版",
     tagColor: "bg-blue-600 text-white",
     name: "NazzleNest 侧睡抱枕 105cm",
-    price: "¥299",
+    price: "¥349",
     description: "适合大多数人的标准尺寸，零压贴合",
     features: ["105cm 标准长度", "微米粒子流动", "分段隔断结构"],
     recommended: false,
@@ -18,7 +18,7 @@ const products = [
     tag: "进阶版",
     tagColor: "bg-blue-700 text-white",
     name: "NazzleNest 侧睡抱枕 120cm",
-    price: "¥399",
+    price: "¥369",
     description: "更充裕的长度，全家共享首选",
     features: ["120cm 进阶长度", "可调硬度设计", "PCM恒温控温"],
     recommended: true,
@@ -85,13 +85,12 @@ export default function Products() {
                     <span className="text-xs font-medium text-gray-900">4.9</span>
                   </div>
 
-                  {/* Product Image Placeholder */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-8xl mb-2">🛏️</div>
-                      <p className="text-gray-400 text-sm">{product.tag}</p>
-                    </div>
-                  </div>
+                  {/* Product Image */}
+                  <img
+                    src={`/product-${product.name.includes('105') ? '105cm' : product.name.includes('120') ? '120cm' : '140cm'}.jpg`}
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
 
                 {/* Product Info */}

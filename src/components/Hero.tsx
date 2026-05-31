@@ -48,7 +48,8 @@ export default function Hero() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
-                href="#technology"
+                href="/product-video.mp4"
+                target="_blank"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-900 text-gray-900 font-medium rounded-full hover:bg-gray-900 hover:text-white transition-all"
               >
                 观看视频
@@ -73,16 +74,12 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="order-1 lg:order-2"
           >
-            <div className="relative aspect-[4/5] lg:aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50 shadow-2xl">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 mx-auto mb-4 bg-blue-200/50 rounded-full flex items-center justify-center">
-                    <span className="text-6xl">🛏️</span>
-                  </div>
-                  <p className="text-blue-600 font-medium text-lg">NazzleNest 侧睡抱枕</p>
-                  <p className="text-blue-400 text-sm mt-1">产品实拍图位置</p>
-                </div>
-              </div>
+            <div className="relative aspect-[4/5] lg:aspect-square rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/product-main.jpg"
+                alt="NazzleNest 侧睡抱枕"
+                className="w-full h-full object-cover"
+              />
               {/* Decorative elements */}
               <div className="absolute top-8 right-8 w-20 h-20 bg-blue-200/60 rounded-full blur-2xl" />
               <div className="absolute bottom-12 left-8 w-32 h-32 bg-blue-300/40 rounded-full blur-3xl" />
