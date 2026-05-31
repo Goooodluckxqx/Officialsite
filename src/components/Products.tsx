@@ -27,7 +27,7 @@ const products = [
     tag: "尊享版",
     tagColor: "bg-gray-900 text-white",
     name: "NazzleNest 侧睡抱枕 140cm",
-    price: "¥499",
+    price: "¥399",
     description: "最大尺寸，全家共享，空间充裕",
     features: ["140cm 尊享长度", "全家适用", "母婴A类认证"],
     recommended: false,
