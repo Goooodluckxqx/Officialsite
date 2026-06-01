@@ -12,8 +12,8 @@ const footerLinks = {
     { label: "核心技术", href: "#technology" },
   ],
   company: [
-    { label: "关于我们", href: "#about" },
-    { label: "品牌理念", href: "#about" },
+    { label: "关于我们", href: "/about" },
+    { label: "品牌理念", href: "/about#brand" },
     { label: "联系我们", href: "#" },
   ],
   support: [

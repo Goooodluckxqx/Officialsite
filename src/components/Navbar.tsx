@@ -10,6 +10,7 @@ const navLinks = [
   { label: "科技", href: "#technology" },
   { label: "场景", href: "#scenarios" },
   { label: "安全认证", href: "#safety" },
+  { label: "关于我们", href: "/about" },
   { label: "常见问题", href: "#faq" },
 ];
 
