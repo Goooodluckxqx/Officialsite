@@ -9,7 +9,7 @@ const footerLinks = {
     { label: "侧睡抱枕 105cm", href: "#products" },
     { label: "侧睡抱枕 120cm", href: "#products" },
     { label: "侧睡抱枕 140cm", href: "#products" },
-    { label: "核心技术", href: "#technology" },
+    { label: "选购指南", href: "/guides" },
   ],
   company: [
     { label: "关于我们", href: "/about" },
@@ -17,9 +17,9 @@ const footerLinks = {
     { label: "联系我们", href: "#" },
   ],
   support: [
-    { label: "常见问题", href: "#faq" },
-    { label: "安全认证", href: "#safety" },
-    { label: "清洗保养", href: "#safety" },
+    { label: "选购指南", href: "/guides" },
+    { label: "安全认证", href: "/guides#safety" },
+    { label: "清洗保养", href: "/guides#care" },
     { label: "退换政策", href: "#" },
   ],
 };

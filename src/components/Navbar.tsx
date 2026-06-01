@@ -7,9 +7,7 @@ import Link from "next/link";
 
 const navLinks = [
   { label: "产品", href: "#products" },
-  { label: "科技", href: "#technology" },
-  { label: "场景", href: "#scenarios" },
-  { label: "安全认证", href: "#safety" },
+  { label: "选购指南", href: "/guides" },
   { label: "关于我们", href: "/about" },
   { label: "常见问题", href: "#faq" },
 ];
