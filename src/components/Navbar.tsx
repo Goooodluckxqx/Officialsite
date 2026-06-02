@@ -6,10 +6,10 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 const navLinks = [
-  { label: "Blog", href: "/blog" },
+  { label: "首页", href: "/" },
   { label: "选购指南", href: "/guides" },
   { label: "关于我们", href: "/about" },
-  { label: "常见问题", href: "#faq" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function Navbar() {
