@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 const navLinks = [
-  { label: "产品", href: "#products" },
+  { label: "Blog", href: "/blog" },
   { label: "选购指南", href: "/guides" },
   { label: "关于我们", href: "/about" },
   { label: "常见问题", href: "#faq" },
