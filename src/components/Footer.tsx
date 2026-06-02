@@ -5,11 +5,15 @@ import { Mail, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const footerLinks = {
-  products: [
-    { label: "侧睡抱枕 105cm", href: "#products" },
-    { label: "侧睡抱枕 120cm", href: "#products" },
-    { label: "侧睡抱枕 140cm", href: "#products" },
+  blog: [
+    { label: "健康科普", href: "/blog/health" },
+    { label: "缓解方法", href: "/blog/relief" },
+    { label: "品类教育", href: "/blog/education" },
+  ],
+  guides: [
     { label: "选购指南", href: "/guides" },
+    { label: "尺寸选择", href: "/guides/how-to-choose/size-guide" },
+    { label: "品牌测评", href: "/guides/reviews" },
   ],
   company: [
     { label: "关于我们", href: "/about" },
@@ -17,7 +21,7 @@ const footerLinks = {
     { label: "联系我们", href: "#" },
   ],
   support: [
-    { label: "选购指南", href: "/guides" },
+    { label: "常见问题", href: "#faq" },
     { label: "安全认证", href: "/guides#safety" },
     { label: "清洗保养", href: "/guides#care" },
     { label: "退换政策", href: "#" },
@@ -60,27 +64,11 @@ export default function Footer() {
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
-          {/* Brand */}
-          <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-serif text-sm font-bold">N</span>
-              </div>
-              <span className="text-xl font-serif font-semibold">
-                NazzleNest<span className="text-blue-500">纳乐适</span>
-              </span>
-            </Link>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              秉持「舒适而居，自在而息」的理念，打破休憩场景与睡姿束缚，
-              提供随形而安、温柔承托的睡眠与居家体验。
-            </p>
-          </div>
-
-          {/* Links */}
+          {/* Blog */}
           <div>
-            <h4 className="font-medium text-sm uppercase tracking-wider text-gray-400 mb-4">产品</h4>
+            <h4 className="font-medium text-sm uppercase tracking-wider text-gray-400 mb-4">健康科普</h4>
             <ul className="space-y-3">
-              {footerLinks.products.map((link) => (
+              {footerLinks.blog.map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="text-gray-300 hover:text-white transition-colors text-sm">
                     {link.label}
@@ -90,6 +78,21 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Guides */}
+          <div>
+            <h4 className="font-medium text-sm uppercase tracking-wider text-gray-400 mb-4">选购指南</h4>
+            <ul className="space-y-3">
+              {footerLinks.guides.map((link) => (
+                <li key={link.label}>
+                  <Link href={link.href} className="text-gray-300 hover:text-white transition-colors text-sm">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
           <div>
             <h4 className="font-medium text-sm uppercase tracking-wider text-gray-400 mb-4">公司</h4>
             <ul className="space-y-3">
@@ -103,6 +106,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Support */}
           <div>
             <h4 className="font-medium text-sm uppercase tracking-wider text-gray-400 mb-4">支持</h4>
             <ul className="space-y-3">
