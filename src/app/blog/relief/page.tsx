@@ -6,25 +6,25 @@ import { ArrowLeft, Activity } from "lucide-react";
 
 const articles = [
   {
-    title: "腰疼怎么缓解？侧睡党必看指南",
-    excerpt: "腰疼不是小事，长期忽视可能影响脊椎健康。本文提供5个立竿见影的缓解方法，今晚就能用。",
+    title: "How to Relieve Back Pain? A Must-Read Guide for Side Sleepers",
+    excerpt: "Back pain is not trivial — long-term neglect may affect spinal health. This article provides 5 immediately effective relief methods you can use tonight.",
     href: "/blog/relief/lower-back-pain-relief",
     date: "2026-06-01",
-    readTime: "6 分钟",
+    readTime: "6 min",
   },
   {
-    title: "侧睡正确姿势：骨科医生推荐",
-    excerpt: "侧睡姿势不对，可能导致腰间盘突出。骨科医生推荐的正确侧睡姿势，快来看看你睡对了吗。",
+    title: "Correct Side Sleeping Posture: Orthopedic Doctor Recommended",
+    excerpt: "Incorrect side sleeping posture may lead to herniated discs. Check out the correct side sleeping posture recommended by orthopedic doctors — are you sleeping right?",
     href: "/blog/relief/side-sleeping-posture",
     date: "2026-05-29",
-    readTime: "5 分钟",
+    readTime: "5 min",
   },
   {
-    title: "改善睡眠的5个动作，今晚就试试",
-    excerpt: "睡前做这几个简单动作，能显著改善睡眠质量，让你一夜好眠到天亮。",
+    title: "5 Exercises to Improve Sleep, Try Them Tonight",
+    excerpt: "Do these simple exercises before bed to significantly improve sleep quality and help you sleep soundly through the night.",
     href: "/blog/relief/improve-sleep-exercises",
     date: "2026-05-26",
-    readTime: "4 分钟",
+    readTime: "4 min",
   },
 ];
 
@@ -41,15 +41,15 @@ export default function ReliefPage() {
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 text-sm font-medium rounded-full">
-                缓解方法
+                Relief Methods
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-6 leading-tight">
-              立竿见影的<br />
-              <span className="text-green-600">缓解方案</span>
+              Immediate &<br />
+              <span className="text-green-600">Effective Relief</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              从姿势调整到工具选择，实用的缓解疼痛与改善睡眠方法。
+              From posture adjustments to tool selection, practical methods to relieve pain and improve sleep.
             </p>
           </motion.div>
         </div>
@@ -65,8 +65,8 @@ export default function ReliefPage() {
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">全部文章</h2>
-            <p className="text-gray-600">实用的缓解方法，立即改善</p>
+            <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">All Articles</h2>
+            <p className="text-gray-600">Practical relief methods for immediate improvement</p>
           </motion.div>
 
           <div className="space-y-8">
@@ -81,7 +81,7 @@ export default function ReliefPage() {
                 <Link href={article.href} className="block bg-gray-50 rounded-2xl p-8 hover:bg-green-50 transition-colors">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">
-                      缓解方法
+                      Relief Methods
                     </span>
                     <span className="text-gray-400 text-xs">{article.date}</span>
                     <span className="text-gray-400 text-xs">·</span>
@@ -94,7 +94,7 @@ export default function ReliefPage() {
                     {article.excerpt}
                   </p>
                   <span className="text-green-600 text-sm font-medium flex items-center gap-2">
-                    阅读全文
+                    Read Full Article
                     <ArrowLeft className="w-4 h-4 rotate-180" />
                   </span>
                 </Link>
@@ -114,16 +114,16 @@ export default function ReliefPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
-              缓解后，选个好支撑
+              After Relief, Get Good Support
             </h2>
             <p className="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
-              从缓解到预防，我们需要的是正确的支撑工具。
+              From relief to prevention, we need the right support tools.
             </p>
             <Link
               href="/guides"
               className="inline-flex items-center px-8 py-3.5 bg-white text-green-600 text-base font-medium rounded-full hover:bg-green-50 transition-colors"
             >
-              选购指南
+              Buying Guide
             </Link>
           </motion.div>
         </div>
