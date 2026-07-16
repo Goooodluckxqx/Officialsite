@@ -1,287 +1,170 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft, Play, CheckCircle, Clock, Activity } from "lucide-react";
 import Link from "next/link";
+import { ArrowLeft, Clock, User } from "lucide-react";
 
-const exercises = [
-  {
-    id: 1,
-    title: "肩颈放松拉伸",
-    duration: "30秒",
-    difficulty: "简单",
-    steps: [
-      "坐在床边，保持背部挺直",
-      "右手轻轻将头部向右侧拉伸",
-      "感受左侧颈肩部位有轻微拉伸感",
-      "保持30秒，换另一侧重复",
-    ],
-    benefits: ["缓解颈部肌肉紧张", "改善血液循环", "减少压迫感"],
-    evidence: "Journal of Orthopedic & Sports Physical Therapy (2019)",
-  },
-  {
-    id: 2,
-    title: "肩胛骨收缩运动",
-    duration: "45秒",
-    difficulty: "简单",
-    steps: [
-      "坐或站立，双臂自然下垂",
-      "缓慢将肩胛骨向后收缩，像要夹住一张纸",
-      "保持5秒，然后放松",
-      "重复10次",
-    ],
-    benefits: ["激活背部肌肉", "改善肩膀姿势", "减轻压迫"],
-    evidence: "Journal of Strength and Conditioning Research (2020)",
-  },
-  {
-    id: 3,
-    title: "枕头高度调整法",
-    duration: "即时",
-    difficulty: "简单",
-    steps: [
-      "检查当前枕头是否能填补颈肩空隙",
-      "如果肩膀被压迫，说明枕头太低",
-      "增加枕头高度（折叠毛巾或换高枕）",
-      "确保颈椎与脊柱保持一条直线",
-    ],
-    benefits: ["立即缓解压迫", "改善呼吸", "减少翻身次数"],
-    evidence: "Sleep Medicine Reviews (2018)",
-  },
-  {
-    id: 4,
-    title: "侧睡支撑调整",
-    duration: "即时",
-    difficulty: "简单",
-    steps: [
-      "在胸前抱一个长枕或用NazzleNest抱枕",
-      "上方手臂和肩膀得到支撑，不悬空",
-      "双腿微曲，膝间可夹一个小枕",
-      "调整至最舒适的位置",
-    ],
-    benefits: ["分散肩膀压力", "保持脊柱对齐", "提升睡眠质量"],
-    evidence: "Spine Journal (2021)",
-  },
-];
-
-const tips = [
-  { icon: "💡", title: "最佳时机", content: "睡前5分钟做拉伸，被窝里就能完成" },
-  { icon: "⏱️", title: "坚持周期", content: "连续7天，肩颈压迫感明显减少" },
-  { icon: "📊", title: "效果数据", content: "83%的使用者在3天内感受到改善" },
-];
-
-export default function ShoulderNumbness() {
+export default function ShoulderNumbnessArticle() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* Header */}
-      <section className="bg-gradient-to-br from-blue-50 to-purple-50 py-16 lg:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <main className="bg-white">
+      {/* Article Header */}
+      <section className="relative py-20 lg:py-28 bg-gradient-to-br from-green-50 via-white to-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
-            <Link
-              href="/blog/relief"
-              className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 mb-8"
-            >
+            <Link href="/blog/relief" className="inline-flex items-center gap-2 text-green-600 text-sm font-medium mb-6 hover:gap-3 transition-all">
               <ArrowLeft className="w-4 h-4" />
-              返回缓解方法
+              Back to Relief Methods
             </Link>
-            
+
             <div className="flex items-center gap-3 mb-6">
-              <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">
-                缓解方法
+              <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">
+                Relief Methods
               </span>
-              <span className="text-sm text-gray-500">4分钟阅读</span>
+              <span className="flex items-center gap-1 text-gray-400 text-xs">
+                <Clock className="w-3 h-3" />
+                5 min read
+              </span>
             </div>
-            
-            <h1 className="text-3xl lg:text-4xl font-serif font-semibold text-gray-900 mb-6">
-              睡觉肩膀压麻了？
-              <br />
-              <span className="text-blue-600">4个动作立即缓解</span>
+
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-6 leading-tight">
+              Numb Shoulders from Sleeping? 4 Moves for Instant Relief
             </h1>
-            
-            <p className="text-lg text-gray-600 leading-relaxed">
-              肩颈压迫不仅影响睡眠质量，还可能导致颈椎问题。
-              这4个<strong>科学验证的动作</strong>，<strong>3分钟内缓解压迫</strong>。
-              所有方法均基于物理治疗研究和临床试验。
-            </p>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Quick Tips */}
-      <section className="py-12 bg-yellow-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-3 gap-6">
-            {tips.map((tip, index) => (
-              <motion.div
-                key={tip.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-5 text-center"
-              >
-                <div className="text-3xl mb-3">{tip.icon}</div>
-                <h3 className="font-semibold text-gray-900 mb-2">{tip.title}</h3>
-                <p className="text-sm text-gray-600">{tip.content}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Main Exercises */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h2 className="text-2xl font-serif font-semibold text-gray-900 mb-12">
-              4个科学验证的缓解动作
-            </h2>
-
-            <div className="space-y-12">
-              {exercises.map((exercise, index) => (
-                <motion.div
-                  key={exercise.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.15 }}
-                  className="bg-gray-50 rounded-3xl p-8 lg:p-12"
-                >
-                  <div className="flex items-start gap-6 mb-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                      <span className="text-lg font-bold text-blue-600">{exercise.id}</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-3">
-                        <h3 className="text-xl font-semibold text-gray-900">
-                          {exercise.title}
-                        </h3>
-                        <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">
-                          {exercise.difficulty}
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-4 text-sm text-gray-500">
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          {exercise.duration}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Activity className="w-4 h-4" />
-                          {exercise.benefits.length}项益处
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Steps */}
-                  <div className="bg-white rounded-2xl p-6 mb-6">
-                    <h4 className="font-medium text-gray-900 mb-4 flex items-center gap-2">
-                      <Play className="w-5 h-5 text-blue-600" />
-                      操作步骤
-                    </h4>
-                    <ol className="space-y-3">
-                      {exercise.steps.map((step, stepIndex) => (
-                        <li key={stepIndex} className="flex items-start gap-3">
-                          <span className="flex-shrink-0 w-6 h-6 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-sm font-medium">
-                            {stepIndex + 1}
-                          </span>
-                          <span className="text-gray-700">{step}</span>
-                        </li>
-                      ))}
-                    </ol>
-                  </div>
-
-                  {/* Benefits */}
-                  <div className="grid sm:grid-cols-3 gap-3 mb-6">
-                    {exercise.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                        <span className="text-sm text-gray-700">{benefit}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Evidence */}
-                  <div className="bg-blue-50 rounded-lg p-4">
-                    <p className="text-sm text-blue-800">
-                      <strong>科学依据：</strong>{exercise.evidence}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="flex items-center gap-3 text-sm text-gray-500">
+              <User className="w-4 h-4" />
+              <span>NazzleNest Health Team</span>
+              <span>·</span>
+              <span>May 29, 2026</span>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+      {/* Article Content */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.article
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="prose prose-lg max-w-none"
           >
-            <h2 className="text-3xl font-serif font-semibold text-white mb-6">
-              动作不够？试试专业支撑
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              NazzleNest侧睡抱枕科学设计，
-              <br />
-              自动填补腰肩空隙，让你整夜舒适无压。
+            <p className="text-gray-700 leading-relaxed mb-6">
+              Waking up with a numb or tingling shoulder is one of the most common complaints among side sleepers. The good news? It's usually caused by pressure on your brachial plexus — the network of nerves running from your spine through your neck and into your arm — and can be relieved quickly with the right movements.
             </p>
-            <Link
-              href="/guides"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 font-medium rounded-full hover:bg-blue-50 transition-colors"
-            >
-              查看选购指南
-              <ArrowLeft className="w-5 h-5 rotate-180" />
-            </Link>
-          </motion.div>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Why Does Your Shoulder Go Numb?</h2>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              When you sleep on your side, your body weight compresses the shoulder and the nerves around it. Without proper support, your arm may end up in a position that pinches these nerves for hours at a time. The result: numbness, tingling, or that familiar "pins and needles" sensation when you wake up.
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">4 Instant Relief Moves</h2>
+
+            <div className="space-y-8 mb-10">
+              <div className="bg-green-50 rounded-2xl p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">1. Shoulder Rolls (30 seconds)</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Stand or sit upright. Slowly roll your shoulders forward in large circles 10 times, then backward 10 times. This increases blood flow and releases tension in the surrounding muscles.
+                </p>
+              </div>
+
+              <div className="bg-green-50 rounded-2xl p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">2. Arm Across Chest Stretch (20 seconds each side)</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Bring your affected arm across your chest. Use your opposite hand to gently pull it closer to your chest until you feel a stretch in the back of your shoulder. Hold for 20 seconds, then switch sides.
+                </p>
+              </div>
+
+              <div className="bg-green-50 rounded-2xl p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">3. Neck Tilts (15 seconds each direction)</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Slowly tilt your head toward your right shoulder until you feel a gentle stretch on the left side of your neck. Hold for 15 seconds, then repeat on the other side. This helps release pressure on the nerves running from your neck to your shoulder.
+                </p>
+              </div>
+
+              <div className="bg-green-50 rounded-2xl p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">4. Doorway Chest Stretch (30 seconds)</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Stand in a doorway with your forearms on the door frame, elbows at shoulder height. Gently lean forward until you feel a stretch across your chest and front shoulders. This opens up the compressed area and restores nerve pathways.
+                </p>
+              </div>
+            </div>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Prevent It from Happening Again</h2>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              While these exercises provide immediate relief, prevention is the real solution. Here's how to stop shoulder numbness before it starts:
+            </p>
+
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-start gap-3 text-gray-700">
+                <span className="text-green-600 mt-1">•</span>
+                <span><strong>Use a side-sleeper pillow</strong> that supports your upper arm, preventing it from compressing against your body</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-700">
+                <span className="text-green-600 mt-1">•</span>
+                <span><strong>Avoid sleeping with your arm under your head</strong> — this is the most common cause of nerve compression</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-700">
+                <span className="text-green-600 mt-1">•</span>
+                <span><strong>Switch sides periodically</strong> if you're a dedicated side sleeper</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-700">
+                <span className="text-green-600 mt-1">•</span>
+                <span><strong>Do these stretches before bed</strong> to release tension and improve circulation</span>
+              </li>
+            </ul>
+
+            <div className="bg-green-50 rounded-2xl p-8 my-10">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Key Takeaway</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Shoulder numbness from sleeping is usually temporary nerve compression, not a serious condition. These four exercises can provide instant relief, but the long-term solution is improving your sleep posture with proper support.
+              </p>
+            </div>
+
+            <p className="text-gray-700 leading-relaxed mb-6">
+              If numbness persists beyond a few minutes after waking, or is accompanied by weakness or pain, consult a healthcare professional to rule out more serious conditions.
+            </p>
+          </motion.article>
         </div>
       </section>
 
-      {/* More Tips */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Related & CTA */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl font-serif font-semibold text-gray-900 mb-8">
-              预防胜于治疗：3个睡前习惯
-            </h2>
-            
-            <div className="space-y-6">
-              <div className="bg-gray-50 rounded-2xl p-6">
-                <h3 className="font-semibold text-gray-900 mb-3">1. 热敷肩颈（5分钟）</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  睡前用热毛巾敷肩颈部位，促进血液循环，放松肌肉。
-                  研究显示，热敷可提升睡眠质量23%（Sleep Medicine, 2019）。
-                </p>
-              </div>
-              
-              <div className="bg-gray-50 rounded-2xl p-6">
-                <h3 className="font-semibold text-gray-900 mb-3">2. 调整枕头高度</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  枕头应能填补颈肩空隙，保持颈椎中立位。
-                  过高或过低都会增加肩膀压力，导致压迫和麻木。
-                </p>
-              </div>
-              
-              <div className="bg-gray-50 rounded-2xl p-6">
-                <h3 className="font-semibold text-gray-900 mb-3">3. 使用侧睡抱枕</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  胸前抱一个长枕，支撑上方手臂和肩膀，分散压力点。
-                  NazzleNest的分段设计，精准支撑颈、腰、腹、腿四大部位。
-                </p>
-              </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Related Articles</h3>
+            <div className="space-y-4 mb-12">
+              <Link href="/blog/health/lower-back-pain-side-sleeping" className="block bg-white rounded-xl p-6 hover:shadow-md transition-shadow">
+                <h4 className="font-medium text-gray-900 mb-1">Side Sleeping with Back Pain? Your Posture May Be Wrong</h4>
+                <p className="text-sm text-gray-500">Anatomical analysis of correct side sleeping posture</p>
+              </Link>
+              <Link href="/blog/relief/side-sleeping-posture" className="block bg-white rounded-xl p-6 hover:shadow-md transition-shadow">
+                <h4 className="font-medium text-gray-900 mb-1">Correct Side Sleeping Posture: Orthopedic Doctor Recommended</h4>
+                <p className="text-sm text-gray-500">Are you sleeping in the right position?</p>
+              </Link>
+            </div>
+
+            <div className="bg-green-600 rounded-2xl p-8 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Sleep Without Numbness</h3>
+              <p className="text-green-100 mb-6">The NazzleNest Side-Sleeping Pillow supports your arm and prevents nerve compression.</p>
+              <Link
+                href="/#products"
+                className="inline-flex items-center px-8 py-3.5 bg-white text-green-600 font-medium rounded-full hover:bg-green-50 transition-colors"
+              >
+                Explore Products
+              </Link>
             </div>
           </motion.div>
         </div>
