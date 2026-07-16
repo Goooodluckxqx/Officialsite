@@ -7,63 +7,63 @@ import { Heart, Activity, BookOpen, ArrowRight } from "lucide-react";
 const blogCategories = [
   {
     icon: Heart,
-    title: "健康科普",
-    description: "腰疼、肩颈酸痛、睡眠质量问题？科学解析，帮你找到根源。",
+    title: "Health & Wellness",
+    description: "Back pain, shoulder soreness, sleep quality issues? Scientific analysis to help you find the root cause.",
     href: "/blog/health",
     color: "red",
     articles: [
-      { title: "侧睡腰疼？可能是你的姿势不对", href: "/blog/health/lower-back-pain-side-sleeping" },
-      { title: "睡觉肩膀压麻了？4个动作立即缓解", href: "/blog/health/shoulder-numbness-relief" },
-      { title: "孕期睡眠姿势指南：怎么睡才舒服", href: "/blog/health/pregnancy-sleep-positions" },
+      { title: "Side Sleeping with Back Pain? Your Posture May Be Wrong", href: "/blog/health/lower-back-pain-side-sleeping" },
+      { title: "Numb Shoulders from Sleeping? 4 Moves for Instant Relief", href: "/blog/health/shoulder-numbness-relief" },
+      { title: "Pregnancy Sleep Position Guide: How to Sleep Comfortably", href: "/blog/health/pregnancy-sleep-positions" },
     ],
   },
   {
     icon: Activity,
-    title: "缓解方法",
-    description: "从姿势调整到工具选择，实用的缓解疼痛与改善睡眠方法。",
+    title: "Relief Methods",
+    description: "From posture adjustments to tool selection, practical methods to relieve pain and improve sleep.",
     href: "/blog/relief",
     color: "green",
     articles: [
-      { title: "腰疼怎么缓解？侧睡党必看指南", href: "/blog/relief/lower-back-pain-relief" },
-      { title: "侧睡正确姿势：骨科医生推荐", href: "/blog/relief/side-sleeping-posture" },
-      { title: "改善睡眠的5个动作，今晚就试试", href: "/blog/relief/improve-sleep-exercises" },
+      { title: "How to Relieve Back Pain? A Must-Read Guide for Side Sleepers", href: "/blog/relief/lower-back-pain-relief" },
+      { title: "Correct Side Sleeping Posture: Orthopedic Doctor Recommended", href: "/blog/relief/side-sleeping-posture" },
+      { title: "5 Exercises to Improve Sleep, Try Them Tonight", href: "/blog/relief/improve-sleep-exercises" },
     ],
   },
   {
     icon: BookOpen,
-    title: "品类教育",
-    description: "侧睡抱枕、U型枕、记忆棉枕，到底哪个适合你？",
+    title: "Product Education",
+    description: "Side-sleeper pillows, U-shaped pillows, memory foam pillows — which one is right for you?",
     href: "/blog/education",
     color: "blue",
     articles: [
-      { title: "侧睡抱枕有用吗？科学数据告诉你", href: "/blog/education/is-side-sleeper-pillow-useful" },
-      { title: "什么是侧睡枕？为什么你需要它", href: "/blog/education/what-is-side-sleeper-pillow" },
-      { title: "U型枕 vs 侧睡枕：全面对比分析", href: "/blog/education/u-pillow-vs-side-sleeper-pillow" },
+      { title: "Are Side-Sleeper Pillows Useful? Science Tells You", href: "/blog/education/is-side-sleeper-pillow-useful" },
+      { title: "What Is a Side-Sleeper Pillow? Why You Need One", href: "/blog/education/what-is-side-sleeper-pillow" },
+      { title: "U-Pillow vs Side-Sleeper Pillow: Full Comparison", href: "/blog/education/u-pillow-vs-side-sleeper-pillow" },
     ],
   },
 ];
 
 const featuredArticles = [
   {
-    title: "侧睡腰疼？可能是你的姿势不对",
-    excerpt: "侧睡时腰疼、肩膀压麻，很可能是姿势问题。本文从解剖学角度解析侧睡正确姿势，帮你找到根源。",
+    title: "Side Sleeping with Back Pain? Your Posture May Be Wrong",
+    excerpt: "Back pain and numb shoulders when side sleeping are likely posture issues. This article analyzes correct side sleeping posture from an anatomical perspective to help you find the root cause.",
     href: "/blog/health/lower-back-pain-side-sleeping",
-    category: "健康科普",
-    readTime: "5 分钟",
+    category: "Health & Wellness",
+    readTime: "5 min",
   },
   {
-    title: "侧睡抱枕有用吗？科学数据告诉你",
-    excerpt: "市面上的侧睡抱枕五花八门，到底有没有用？我们从医学、工学、用户数据三个维度给你答案。",
+    title: "Are Side-Sleeper Pillows Useful? Science Tells You",
+    excerpt: "Side-sleeper pillows come in all shapes and sizes — do they actually work? We give you the answer from medical, ergonomic, and user data perspectives.",
     href: "/blog/education/is-side-sleeper-pillow-useful",
-    category: "品类教育",
-    readTime: "8 分钟",
+    category: "Product Education",
+    readTime: "8 min",
   },
   {
-    title: "腰疼怎么缓解？侧睡党必看指南",
-    excerpt: "腰疼不是小事，长期忽视可能影响脊椎健康。本文提供5个立竿见影的缓解方法，今晚就能用。",
+    title: "How to Relieve Back Pain? A Must-Read Guide for Side Sleepers",
+    excerpt: "Back pain is not trivial — long-term neglect may affect spinal health. This article provides 5 immediately effective relief methods you can use tonight.",
     href: "/blog/relief/lower-back-pain-relief",
-    category: "缓解方法",
-    readTime: "6 分钟",
+    category: "Relief Methods",
+    readTime: "6 min",
   },
 ];
 
@@ -80,16 +80,16 @@ export default function BlogPage() {
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">
-                健康科普 · 品类教育
+                Health & Wellness · Product Education
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-6 leading-tight">
-              睡得香，<br />
-              <span className="text-blue-600">从懂开始</span>
+              Sleep Well,<br />
+              <span className="text-blue-600">Starting with Understanding</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              从腰疼原因到缓解方法，从姿势纠正到工具选择，
-              专业科普帮你做出明智决策。
+              From causes of back pain to relief methods, from posture correction to tool selection,
+              professional science to help you make informed decisions.
             </p>
           </motion.div>
         </div>
@@ -106,7 +106,7 @@ export default function BlogPage() {
             className="text-center mb-12"
           >
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
-              热门文章
+              Featured Articles
             </h2>
           </motion.div>
 
@@ -150,10 +150,10 @@ export default function BlogPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
-              内容分类
+              Content Categories
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              从健康科普到品类教育，全方位帮你了解睡眠健康
+              From health science to product education, comprehensive help for your sleep health
             </p>
           </motion.div>
 
@@ -192,7 +192,7 @@ export default function BlogPage() {
                   href={category.href}
                   className={`inline-flex items-center gap-2 text-sm font-medium text-${category.color}-600 hover:gap-3 transition-all`}
                 >
-                  查看全部
+                  View All
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
@@ -211,23 +211,23 @@ export default function BlogPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
-              找到适合的了吗？立即选购
+              Found What You Need? Shop Now
             </h2>
             <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-              从科普到选购，我们希望帮你做出明智选择。
+              From science to shopping, we want to help you make informed choices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/guides"
                 className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-blue-600 text-base font-medium rounded-full hover:bg-blue-50 transition-colors"
               >
-                选购指南
+                Buying Guide
               </Link>
               <Link
                 href="/#products"
                 className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-700 text-white text-base font-medium rounded-full hover:bg-blue-800 transition-colors border border-blue-400"
               >
-                立即选购
+                Shop Now
               </Link>
             </div>
           </motion.div>
