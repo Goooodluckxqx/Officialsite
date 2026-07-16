@@ -7,51 +7,51 @@ import { ArrowRight, Ruler, Scale, Baby, GitCompare } from "lucide-react";
 const guideCategories = [
   {
     icon: Ruler,
-    title: "尺寸选择指南",
-    description: "105/120/140cm，如何选择适合你的尺寸？根据身高、体重、使用场景，帮你选对不选贵。",
+    title: "Size Selection Guide",
+    description: "105/120/140cm — how to choose the right size for you? Based on height, weight, and usage scenarios, we help you choose right, not expensive.",
     links: [
-      { title: "105/120/140cm 怎么选？", href: "/guides/how-to-choose/size-guide" },
-      { title: "调节带设计：硬度可调的重要性", href: "/guides/how-to-choose/firmness-guide" },
+      { title: "105/120/140cm — How to Choose?", href: "/guides/how-to-choose/size-guide" },
+      { title: "Adjustable Strap Design: Why Firmness Matters", href: "/guides/how-to-choose/firmness-guide" },
     ],
     color: "blue",
   },
   {
     icon: Baby,
-    title: "孕妇枕选购指南",
-    description: "孕期睡眠安全第一。A类标准、FDA认证、托腹设计，帮你选对孕期专属支撑。",
+    title: "Pregnancy Pillow Buying Guide",
+    description: "Pregnancy sleep safety comes first. Class A standards, FDA certification, belly support design — we help you choose safe, exclusive pregnancy support.",
     links: [
-      { title: "孕妇枕选购：安全第一", href: "/guides/how-to-choose/pregnancy-guide" },
-      { title: "孕期托腹神器：怎么选才安全？", href: "/guides/how-to-choose/pregnancy-safety" },
+      { title: "Pregnancy Pillow Buying: Safety First", href: "/guides/how-to-choose/pregnancy-guide" },
+      { title: "Pregnancy Belly Support: How to Choose Safely?", href: "/guides/how-to-choose/pregnancy-safety" },
     ],
     color: "pink",
   },
   {
     icon: Scale,
-    title: "品类对比指南",
-    description: "侧睡枕 vs U型枕 vs 普通抱枕，多维度对比，帮你找到最适合的睡眠支撑工具。",
+    title: "Category Comparison Guide",
+    description: "Side-sleeper pillow vs U-pillow vs regular pillow, multi-dimensional comparison to help you find the most suitable sleep support tool.",
     links: [
-      { title: "侧睡枕 vs U型枕，哪个更好？", href: "/guides/reviews/side-sleeper-vs-u-pillow" },
-      { title: "2026 侧睡枕横评对比", href: "/guides/reviews/2026-comparison" },
+      { title: "Side-Sleeper Pillow vs U-Pillow, Which Is Better?", href: "/guides/reviews/side-sleeper-vs-u-pillow" },
+      { title: "2026 Side-Sleeper Pillow Comparison Review", href: "/guides/reviews/2026-comparison" },
     ],
     color: "green",
   },
   {
     icon: GitCompare,
-    title: "品牌测评指南",
-    description: "纳乐适 vs 亚朵星球 vs 其他品牌，真实测评，帮你做出明智选择。",
+    title: "Brand Review Guide",
+    description: "NazzleNest vs Atour Planet vs other brands, real reviews to help you make informed choices.",
     links: [
-      { title: "纳乐适真实测评：10,000+用户的4.9分体验", href: "/guides/reviews/nazzlenest-review" },
-      { title: "纳乐适 vs 亚朵星球：全面对比", href: "/guides/reviews/nazzlenest-vs-yaduo" },
+      { title: "NazzleNest Real Review: 10,000+ Users' 4.9-Star Experience", href: "/guides/reviews/nazzlenest-review" },
+      { title: "NazzleNest vs Atour Planet: Full Comparison", href: "/guides/reviews/nazzlenest-vs-yaduo" },
     ],
     color: "purple",
   },
 ];
 
 const quickLinks = [
-  { title: "侧睡枕推荐 2026", href: "/guides/how-to-choose/best-side-sleeper-pillow-2026" },
-  { title: "侧睡枕有用吗？科学解答", href: "/blog/education/is-side-sleeper-pillow-useful" },
-  { title: "腰疼怎么缓解？侧睡姿势指南", href: "/blog/health/lower-back-pain-relief" },
-  { title: "105和120区别：尺寸选择指南", href: "/guides/how-to-choose/size-guide" },
+  { title: "Best Side-Sleeper Pillow 2026", href: "/guides/how-to-choose/best-side-sleeper-pillow-2026" },
+  { title: "Are Side-Sleeper Pillows Useful? Scientific Answer", href: "/blog/education/is-side-sleeper-pillow-useful" },
+  { title: "How to Relieve Back Pain? Side Sleeping Posture Guide", href: "/blog/health/lower-back-pain-relief" },
+  { title: "105 vs 120: Size Selection Guide", href: "/guides/how-to-choose/size-guide" },
 ];
 
 export default function GuidesPage() {
@@ -67,16 +67,16 @@ export default function GuidesPage() {
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">
-                选购指南
+                Buying Guide
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-6 leading-tight">
-              选对、选好、<br />
-              <span className="text-blue-600">睡得香</span>
+              Choose Right, Choose Well,<br />
+              <span className="text-blue-600">Sleep Soundly</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              从尺寸选择到品牌对比，从孕妇安全到硬度调节，
-              专业指南帮你做出明智选择。
+              From size selection to brand comparison, from pregnancy safety to firmness adjustment,
+              professional guides to help you make informed choices.
             </p>
           </motion.div>
         </div>
@@ -118,10 +118,10 @@ export default function GuidesPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
-              选购指南
+              Buying Guide
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              专业、客观、实用的选购建议，帮你找到最适合的睡眠支撑工具
+              Professional, objective, and practical buying advice to help you find the most suitable sleep support tool
             </p>
           </motion.div>
 
@@ -173,23 +173,23 @@ export default function GuidesPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
-              选好了吗？立即拥有你的「云端睡窝」
+              Ready? Get Your "Cloud Sleep Nest" Now
             </h2>
             <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-              三种尺寸可选，侧面调节带一拉定制软硬度，全家共享舒适。
+              Three sizes available, side adjustable strap for custom firmness, comfortable for the whole family.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/#products"
                 className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-blue-600 text-base font-medium rounded-full hover:bg-blue-50 transition-colors"
               >
-                立即选购
+                Shop Now
               </Link>
               <Link
                 href="/blog"
                 className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-700 text-white text-base font-medium rounded-full hover:bg-blue-800 transition-colors border border-blue-400"
               >
-                阅读健康科普
+                Read Health Science
               </Link>
             </div>
           </motion.div>
