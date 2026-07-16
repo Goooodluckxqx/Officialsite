@@ -4,8 +4,8 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "NazzleNest | 智能家居舒适解决方案",
-  description: "用智能、优雅的家居舒适产品，打造更美好的居住空间。",
+  title: "NazzleNest | Smart Home Comfort Solutions",
+  description: "Create a better living space with smart, elegant home comfort products.",
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="en">
       <head>
         <Script
           strategy="afterInteractive"
