@@ -5,35 +5,35 @@ import { Star, Quote } from "lucide-react";
 
 const reviews = [
   {
-    title: "终于找到了完美抱枕",
-    text: "\"作为侧睡党，以前每天早上起来肩膀都很酸。用了NazzleNest侧睡抱枕后，肩膀和腰部都有很好的支撑，醒来不再酸痛了！\"",
-    author: "张女士",
+    title: "Finally Found the Perfect Pillow",
+    text: "\"As a side sleeper, I used to wake up with sore shoulders every morning. With the NazzleNest side-sleeping pillow, my shoulders and waist are perfectly supported — no more pain!\"",
+    author: "Ms. Zhang",
     verified: true,
-    product: "侧睡抱枕 120cm",
+    product: "Side-Sleeping Pillow 120cm",
     rating: 5,
   },
   {
-    title: "孕期救星！",
-    text: "\"怀孕6个月，晚上睡觉总是翻来覆去不舒服。这个抱枕可以托住腹部，减轻腰部压力，终于能睡个好觉了。而且材质安全，可以直接贴肤。\"",
-    author: "李女士",
+    title: "A Lifesaver During Pregnancy!",
+    text: "\"6 months pregnant, I couldn't get comfortable at night. This pillow supports my belly and relieves waist pressure — finally a good night's sleep! And the material is safe enough to use directly against skin.\"",
+    author: "Ms. Li",
     verified: true,
-    product: "侧睡抱枕 140cm",
+    product: "Side-Sleeping Pillow 140cm",
     rating: 5,
   },
   {
-    title: "全家都爱用",
-    text: "\"买了140cm的给全家用，我用来侧睡，老公垫腰，孩子当玩具。调节带设计很贴心，想软就软，想硬就硬，一枕多用！\"",
-    author: "王先生",
+    title: "The Whole Family Loves It",
+    text: "\"Bought the 140cm for the whole family — I use it for side sleeping, my husband uses it for back support, and the kids love it as a toy. The adjustable strap design is thoughtful — soft or firm, however you want it. One pillow, many uses!\"",
+    author: "Mr. Wang",
     verified: true,
-    product: "侧睡抱枕 140cm",
+    product: "Side-Sleeping Pillow 140cm",
     rating: 5,
   },
   {
-    title: "夏天也不闷热",
-    text: "\"本来担心抱枕会闷热，结果PCM控温真的很有效，整晚都不会觉得闷汗。面料也很舒服，像婴儿打底衫一样柔软。\"",
-    author: "赵女士",
+    title: "Not Stuffy Even in Summer",
+    text: "\"I was worried the pillow would be stuffy, but the PCM temperature control really works — no sweating all night. The fabric is also super comfortable, soft like baby onesies.\"",
+    author: "Ms. Zhao",
     verified: true,
-    product: "侧睡抱枕 105cm",
+    product: "Side-Sleeping Pillow 105cm",
     rating: 5,
   },
 ];
@@ -51,10 +51,10 @@ export default function Reviews() {
           className="text-center mb-16"
         >
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4">
-            用户好评
+            Customer Reviews
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            真实用户的真实体验
+            Real experiences from real users
           </p>
           <div className="mt-4 flex items-center justify-center gap-2">
             <div className="flex">
@@ -65,7 +65,7 @@ export default function Reviews() {
             <span className="text-2xl font-bold text-blue-500">4.9</span>
             <span className="text-gray-400">/5.0</span>
           </div>
-          <p className="text-sm text-gray-400 mt-2">已有超过10,000位用户选择NazzleNest</p>
+          <p className="text-sm text-gray-400 mt-2">Over 10,000 users have chosen NazzleNest</p>
         </motion.div>
 
         {/* Reviews Grid */}
