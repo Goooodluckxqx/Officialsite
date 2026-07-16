@@ -6,9 +6,9 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 const navLinks = [
-  { label: "首页", href: "/" },
-  { label: "选购指南", href: "/guides" },
-  { label: "关于我们", href: "/about" },
+  { label: "Home", href: "/" },
+  { label: "Buying Guide", href: "/guides" },
+  { label: "About Us", href: "/about" },
   { label: "Blog", href: "/blog" },
 ];
 
@@ -26,8 +26,8 @@ export default function Navbar() {
     <>
       {/* Top Banner */}
       <div className="bg-gray-900 text-white text-center py-2 text-sm tracking-wide">
-        <span className="font-medium">2026 新品上市：</span>
-        NazzleNest 侧睡抱枕，随形而安，零压自在
+        <span className="font-medium">2026 New Release:</span>
+        NazzleNest Side-Sleeping Pillow — Shape to Comfort, Zero Pressure Freedom
       </div>
 
       <header
@@ -43,7 +43,7 @@ export default function Navbar() {
                 <span className="text-white font-serif text-sm font-bold">N</span>
               </div>
               <span className="text-xl font-serif font-semibold text-gray-900 tracking-tight">
-                NazzleNest<span className="text-blue-600">纳乐适</span>
+                NazzleNest
               </span>
             </Link>
 
@@ -66,7 +66,7 @@ export default function Navbar() {
                 href="#products"
                 className="hidden lg:inline-flex items-center px-5 py-2.5 bg-gray-900 text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors"
               >
-                立即购买
+                Buy Now
               </Link>
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
@@ -104,7 +104,7 @@ export default function Navbar() {
                     onClick={() => setMobileOpen(false)}
                     className="block w-full text-center px-5 py-3 bg-gray-900 text-white text-sm font-medium rounded-full"
                   >
-                    立即购买
+                    Buy Now
                   </Link>
                 </div>
               </div>
