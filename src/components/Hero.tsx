@@ -5,10 +5,10 @@ import { ArrowRight, Shield, Truck, Star } from "lucide-react";
 import Link from "next/link";
 
 const trustBadges = [
-  { icon: Shield, label: "GB18401 A类认证" },
-  { icon: Shield, label: "FDA食品级认证" },
-  { icon: Star, label: "PCM恒温控温" },
-  { icon: Truck, label: "免费配送" },
+  { icon: Shield, label: "GB18401 Class A Certified" },
+  { icon: Shield, label: "FDA Food-Grade Certified" },
+  { icon: Star, label: "PCM Temperature Control" },
+  { icon: Truck, label: "Free Shipping" },
 ];
 
 export default function Hero() {
@@ -25,18 +25,17 @@ export default function Hero() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6">
               <Star className="w-4 h-4 fill-blue-500 text-blue-500" />
-              2026 新品上市
+              2026 New Release
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-900 leading-[1.1] mb-6">
-              随形而安，
+              Shape to Comfort,
               <br />
-              <span className="text-blue-600">零压自在</span>
+              <span className="text-blue-600">Zero Pressure Freedom</span>
             </h1>
 
             <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-lg">
-              NazzleNest 侧睡抱枕，以微米粒子流动科技+分段稳托结构，
-              为您打造「会流动的拥抱」零压体验
+              NazzleNest Side-Sleeping Pillow — with micro-particle flow technology and segmented support structure, delivering a &quot;flowing embrace&quot; zero-pressure experience
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -44,7 +43,7 @@ export default function Hero() {
                 href="#products"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-all hover:gap-3 shadow-lg hover:shadow-xl"
               >
-                探索产品
+                Explore Products
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
@@ -52,7 +51,7 @@ export default function Hero() {
                 target="_blank"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-900 text-gray-900 font-medium rounded-full hover:bg-gray-900 hover:text-white transition-all"
               >
-                观看视频
+                Watch Video
               </Link>
             </div>
 
@@ -77,7 +76,7 @@ export default function Hero() {
             <div className="relative aspect-[4/5] lg:aspect-square rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="/product-main.jpg"
-                alt="NazzleNest 侧睡抱枕"
+                alt="NazzleNest Side-Sleeping Pillow"
                 className="w-full h-full object-cover"
               />
               {/* Decorative elements */}
