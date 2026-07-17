@@ -21,7 +21,7 @@ const products = [
     tag: "New Release",
     tagColor: "bg-warm-600 text-white",
     name: "NazzleNest Weighted Heated Eye Mask",
-    price: "$159 - $189",
+    price: "$40 - $55",
     description: "Give tired eyes a little warmth and weight. Light-blocking, warm, and gently weighted for a calm-down ritual.",
     features: ["Light-Blocking Multi-Layer Design", "Cassia Seed Heat Pack", "~100g Gentle Weight", "Eye-Cavity Comfort Fit"],
     href: "/products/weighted-heated-eye-mask",

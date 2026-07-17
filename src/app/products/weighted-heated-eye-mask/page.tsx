@@ -6,13 +6,13 @@ import { ArrowRight, Check, Star, Shield, Sun, Thermometer, Eye, Package } from 
 import Link from "next/link";
 
 const colors = [
-  { id: "mist-purple", name: "Mist Purple", price: 159, className: "bg-purple-200" },
-  { id: "misty-blue", name: "Misty Blue", price: 159, className: "bg-blue-200" },
+  { id: "mist-purple", name: "Mist Purple", price: 40, className: "bg-purple-200" },
+  { id: "misty-blue", name: "Misty Blue", price: 40, className: "bg-blue-200" },
 ];
 
 const sets = [
-  { id: "standard", name: "Standard Set", price: 159, includes: "Eye mask + 1 heat pack + travel pouch" },
-  { id: "plus", name: "Heat Pack Plus Set", price: 189, includes: "Eye mask + 2 heat packs + travel pouch" },
+  { id: "standard", name: "Standard Set", price: 40, includes: "Eye mask + 1 heat pack + travel pouch" },
+  { id: "plus", name: "Heat Pack Plus Set", price: 55, includes: "Eye mask + 2 heat packs + travel pouch" },
 ];
 
 const layers = [

@@ -29,7 +29,7 @@ const categories = [
         name: "NazzleNest Weighted Heated Eye Mask",
         tag: "New Release",
         tagColor: "bg-warm-600 text-white",
-        price: "$159 - $189",
+        price: "$40 - $55",
         description: "Blackout eye mask with a gentle ~100g cassia seed heat pack. Eye-cavity design and skin-friendly cotton contact layer.",
         features: ["True blackout layers", "Cassia seed heat pack", "Eye-cavity silicone cushion", "Travel pouch included"],
         href: "/products/weighted-heated-eye-mask",
