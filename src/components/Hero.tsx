@@ -23,24 +23,24 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="order-2 lg:order-1"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6">
-              <Star className="w-4 h-4 fill-blue-500 text-blue-500" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-warm-100 text-warm-700 rounded-full text-sm font-medium mb-6">
+              <Star className="w-4 h-4 fill-warm-500 text-warm-500" />
               2026 New Release
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-900 leading-[1.1] mb-6">
-              Shape to Comfort,
+              Rest Starts
               <br />
-              <span className="text-blue-600">Zero Pressure Freedom</span>
+              <span className="text-blue-600">Before You Fall Asleep</span>
             </h1>
 
             <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-lg">
-              NazzleNest Side-Sleeping Pillow — with micro-particle flow technology and segmented support structure, delivering a &quot;flowing embrace&quot; zero-pressure experience
+              NazzleNest helps your body let go and your eyes quiet down. The side-sleeping pillow carries your weight; the weighted heated eye mask blocks the light and adds warmth. Together, they make rest a ritual.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
-                href="#products"
+                href="/products"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-all hover:gap-3 shadow-lg hover:shadow-xl"
               >
                 Explore Products
@@ -76,12 +76,12 @@ export default function Hero() {
             <div className="relative aspect-[4/5] lg:aspect-square rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="/product-main.jpg"
-                alt="NazzleNest Side-Sleeping Pillow"
+                alt="NazzleNest Side-Sleeping Pillow and Weighted Heated Eye Mask"
                 className="w-full h-full object-cover"
               />
               {/* Decorative elements */}
               <div className="absolute top-8 right-8 w-20 h-20 bg-blue-200/60 rounded-full blur-2xl" />
-              <div className="absolute bottom-12 left-8 w-32 h-32 bg-blue-300/40 rounded-full blur-3xl" />
+              <div className="absolute bottom-12 left-8 w-32 h-32 bg-warm-300/40 rounded-full blur-3xl" />
             </div>
           </motion.div>
         </div>

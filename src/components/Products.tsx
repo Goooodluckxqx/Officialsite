@@ -6,31 +6,26 @@ import Link from "next/link";
 
 const products = [
   {
-    tag: "Standard",
+    category: "Body Support",
+    tag: "Core Line",
     tagColor: "bg-blue-600 text-white",
-    name: "NazzleNest Side-Sleeping Pillow 105cm",
-    price: "$349",
-    description: "Standard size for most people, zero-pressure fit",
-    features: ["105cm Standard Length", "Micro-Particle Flow", "Segmented Structure"],
-    recommended: false,
+    name: "NazzleNest Side-Sleeping Pillow",
+    price: "From $149",
+    description: "Put your body's weight and fatigue into it. Continuous support from chest to calf, made for side sleepers.",
+    features: ["105 / 120 / 140cm Sizes", "Micro-Particle Flow Support", "PCM Temperature Control", "Baby-Safe Class A Cover"],
+    href: "/products/side-sleeping-pillow",
+    image: "/product-pillow.jpg",
   },
   {
-    tag: "Advanced",
-    tagColor: "bg-blue-700 text-white",
-    name: "NazzleNest Side-Sleeping Pillow 120cm",
-    price: "$369",
-    description: "Extra length, perfect for family sharing",
-    features: ["120cm Advanced Length", "Adjustable Firmness", "PCM Temperature Control"],
-    recommended: true,
-  },
-  {
-    tag: "Premium",
-    tagColor: "bg-gray-900 text-white",
-    name: "NazzleNest Side-Sleeping Pillow 140cm",
-    price: "$399",
-    description: "Maximum size, family-friendly, spacious",
-    features: ["140cm Premium Length", "Family-Friendly", "Mother & Baby Class A Certified"],
-    recommended: false,
+    category: "Sensory Relaxation",
+    tag: "New Release",
+    tagColor: "bg-warm-600 text-white",
+    name: "NazzleNest Weighted Heated Eye Mask",
+    price: "$159 - $189",
+    description: "Give tired eyes a little warmth and weight. Light-blocking, warm, and gently weighted for a calm-down ritual.",
+    features: ["Light-Blocking Multi-Layer Design", "Cassia Seed Heat Pack", "~100g Gentle Weight", "Eye-Cavity Comfort Fit"],
+    href: "/products/weighted-heated-eye-mask",
+    image: "/product-eyemask.jpg",
   },
 ];
 
@@ -50,12 +45,12 @@ export default function Products() {
             Featured Products
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Dynamic Support · Universal Fit · Baby-Safe · Family-Friendly
+            Body support meets sensory relaxation. Rest starts before you fall asleep.
           </p>
         </motion.div>
 
         {/* Product Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10">
           {products.map((product, index) => (
             <motion.div
               key={product.name}
@@ -64,19 +59,17 @@ export default function Products() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className={`group block relative ${product.recommended ? 'ring-2 ring-blue-600' : ''}`}>
-                {/* Recommended Badge */}
-                {product.recommended && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold z-10">
-                    Most Popular
-                  </div>
-                )}
-
+              <Link href={product.href} className="group block relative">
                 {/* Product Card */}
                 <div className="relative bg-gray-50 rounded-2xl overflow-hidden aspect-[4/3] mb-6">
-                  {/* Tag */}
-                  <div className={`absolute top-4 left-4 px-3 py-1 ${product.tagColor} text-xs font-semibold rounded-full z-10`}>
-                    {product.tag}
+                  {/* Category + Tag */}
+                  <div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
+                    <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-900 text-xs font-semibold rounded-full">
+                      {product.category}
+                    </span>
+                    <span className={`px-3 py-1 ${product.tagColor} text-xs font-semibold rounded-full`}>
+                      {product.tag}
+                    </span>
                   </div>
 
                   {/* Rating */}
@@ -87,7 +80,7 @@ export default function Products() {
 
                   {/* Product Image */}
                   <img
-                    src={`/product-${product.name.includes('105') ? '105cm' : product.name.includes('120') ? '120cm' : '140cm'}.jpg`}
+                    src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -96,7 +89,7 @@ export default function Products() {
                 {/* Product Info */}
                 <div className="space-y-4">
                   <div>
-                    <h3 className="font-bold text-gray-900 text-lg mb-1">{product.name}</h3>
+                    <h3 className="font-bold text-gray-900 text-xl mb-2">{product.name}</h3>
                     <p className="text-sm text-gray-600">{product.description}</p>
                   </div>
 
@@ -110,19 +103,16 @@ export default function Products() {
                     ))}
                   </ul>
 
-                  {/* Price */}
+                  {/* Price & CTA */}
                   <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                     <span className="text-2xl font-bold text-gray-900">{product.price}</span>
-                    <Link
-                      href="#"
-                      className="inline-flex items-center gap-2 text-blue-600 font-medium hover:gap-3 transition-all"
-                    >
+                    <span className="inline-flex items-center gap-2 text-blue-600 font-medium group-hover:gap-3 transition-all">
                       View Details
                       <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    </span>
                   </div>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -144,7 +134,7 @@ export default function Products() {
             <div className="text-center">
               <div className="text-4xl mb-4">🏗️</div>
               <h4 className="font-bold text-gray-900 mb-2">Segmented Support Structure</h4>
-              <p className="text-sm text-gray-600">Locks particles in four support zones, no shifting, no collapsing, stays plump all night</p>
+              <p className="text-sm text-gray-600">Three independent chambers lock particles in place, no shifting, no collapsing, stays plump all night</p>
             </div>
             <div className="text-center">
               <div className="text-4xl mb-4">🌡️</div>
@@ -162,10 +152,10 @@ export default function Products() {
           className="text-center mt-12"
         >
           <Link
-            href="#technology"
-            className="inline-flex items-center gap-2 text-gray-900 font-medium hover:gap-3 transition-all"
+            href="/products"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-all hover:gap-3"
           >
-            Learn All Technologies
+            View All Products
             <ArrowRight className="w-5 h-5" />
           </Link>
         </motion.div>

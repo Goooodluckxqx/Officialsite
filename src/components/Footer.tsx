@@ -5,6 +5,11 @@ import { Mail, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const footerLinks = {
+  products: [
+    { label: "Side-Sleeping Pillow", href: "/products/side-sleeping-pillow" },
+    { label: "Weighted Heated Eye Mask", href: "/products/weighted-heated-eye-mask" },
+    { label: "All Products", href: "/products" },
+  ],
   blog: [
     { label: "Health & Wellness", href: "/blog/health" },
     { label: "Relief Methods", href: "/blog/relief" },
@@ -63,7 +68,21 @@ export default function Footer() {
 
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
+          {/* Products */}
+          <div>
+            <h4 className="font-medium text-sm uppercase tracking-wider text-gray-400 mb-4">Products</h4>
+            <ul className="space-y-3">
+              {footerLinks.products.map((link) => (
+                <li key={link.label}>
+                  <Link href={link.href} className="text-gray-300 hover:text-white transition-colors text-sm">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Blog */}
           <div>
             <h4 className="font-medium text-sm uppercase tracking-wider text-gray-400 mb-4">Health & Wellness</h4>
