@@ -51,5 +51,3 @@ Connected to Vercel for automatic deployment on push to `main`.
 ---
 
 © 2026 NazzleNest. All Rights Reserved.
-Updated product images
-Vercel redeploy attempt 2026-07-19T02:29:03Z
