@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-white text-navy-900;
+    @apply bg-cream text-chocolate;
   }
 }
 
