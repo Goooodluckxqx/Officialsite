@@ -7,6 +7,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'cream': '#F7F2EA',
+        'oat': '#DCCFBD',
+        'greige': '#B8B2A8',
+        'lavender': '#B9ACC8',
+        'milktea': '#B98552',
+        'milkteaDark': '#8F6A40',
+        'chocolate': '#3A2821',
+        'chocolateLight': '#4A3831',
+        'sage': '#8F9A82',
+        'amber': '#C89B5E',
+        'distantBlue': '#8AA6B8', // placeholder until physical color is locked
+
         'navy': {
           50: '#f0f4f8',
           100: '#d9e2ec',
