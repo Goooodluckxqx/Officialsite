@@ -69,9 +69,9 @@ const featuredArticles = [
 
 export default function BlogPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-cream">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-28 bg-gradient-to-br from-blue-50 via-white to-gray-50">
+      <section className="relative py-20 lg:py-28 bg-gradient-to-br from-oat/10 via-cream to-oat/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -79,15 +79,15 @@ export default function BlogPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="mb-6">
-              <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">
+              <span className="inline-block px-4 py-1.5 bg-lavender/10 text-milktea-dark text-sm font-medium rounded-full">
                 Health & Wellness · Product Education
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-chocolate mb-6 leading-tight">
               Sleep Well,<br />
-              <span className="text-blue-600">Starting with Understanding</span>
+              <span className="text-milktea">Starting with Understanding</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-chocolate/70 max-w-2xl mx-auto leading-relaxed">
               From causes of back pain to relief methods, from posture correction to tool selection,
               professional science to help you make informed decisions.
             </p>
@@ -96,7 +96,7 @@ export default function BlogPage() {
       </section>
 
       {/* Featured Articles */}
-      <section className="py-12 bg-white border-b border-gray-100">
+      <section className="py-12 bg-cream border-b border-greige/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -105,7 +105,7 @@ export default function BlogPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-chocolate mb-4">
               Featured Articles
             </h2>
           </motion.div>
@@ -119,17 +119,17 @@ export default function BlogPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <Link href={article.href} className="block bg-gray-50 rounded-2xl p-6 hover:bg-blue-50 transition-colors h-full">
+                <Link href={article.href} className="block bg-oat/10 rounded-2xl p-6 hover:bg-oat/10 transition-colors h-full">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">
+                    <span className="px-3 py-1 bg-lavender/10 text-milktea-dark text-xs font-medium rounded-full">
                       {article.category}
                     </span>
-                    <span className="text-gray-400 text-xs">{article.readTime}</span>
+                    <span className="text-greige text-xs">{article.readTime}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">
+                  <h3 className="text-lg font-bold text-chocolate mb-3 line-clamp-2">
                     {article.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                  <p className="text-chocolate/70 text-sm leading-relaxed line-clamp-3">
                     {article.excerpt}
                   </p>
                 </Link>
@@ -140,7 +140,7 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Categories */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -149,10 +149,10 @@ export default function BlogPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-chocolate mb-4">
               Content Categories
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-chocolate/70 max-w-2xl mx-auto">
               From health science to product education, comprehensive help for your sleep health
             </p>
           </motion.div>
@@ -165,15 +165,15 @@ export default function BlogPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-2xl p-8"
+                className="bg-oat/10 rounded-2xl p-8"
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`w-12 h-12 bg-${category.color}-100 rounded-xl flex items-center justify-center flex-shrink-0`}>
                     <category.icon className={`w-6 h-6 text-${category.color}-600`} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{category.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{category.description}</p>
+                    <h3 className="text-xl font-bold text-chocolate mb-2">{category.title}</h3>
+                    <p className="text-chocolate/70 text-sm leading-relaxed">{category.description}</p>
                   </div>
                 </div>
                 <ul className="space-y-3 mb-6">
@@ -181,7 +181,7 @@ export default function BlogPage() {
                     <li key={i}>
                       <Link
                         href={article.href}
-                        className="text-sm text-gray-700 hover:text-blue-700 transition-colors line-clamp-1"
+                        className="text-sm text-chocolate/80 hover:text-milktea-dark transition-colors line-clamp-1"
                       >
                         {article.title}
                       </Link>
@@ -202,7 +202,7 @@ export default function BlogPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-milktea">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -210,22 +210,22 @@ export default function BlogPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-cream mb-6">
               Found What You Need? Shop Now
             </h2>
-            <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-cream/80 text-lg mb-8 max-w-2xl mx-auto">
               From science to shopping, we want to help you make informed choices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/guides"
-                className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-blue-600 text-base font-medium rounded-full hover:bg-blue-50 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-3.5 bg-cream text-milktea text-base font-medium rounded-full hover:bg-oat/10 transition-colors"
               >
                 Buying Guide
               </Link>
               <Link
                 href="/#products"
-                className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-700 text-white text-base font-medium rounded-full hover:bg-blue-800 transition-colors border border-blue-400"
+                className="inline-flex items-center justify-center px-8 py-3.5 bg-milktea-dark text-cream text-base font-medium rounded-full hover:bg-milktea-dark transition-colors border border-lavender"
               >
                 Shop Now
               </Link>
