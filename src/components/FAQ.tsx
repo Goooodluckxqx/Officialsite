@@ -69,12 +69,12 @@ function FAQItem({ question, answer, isOpen, onClick }: {
   onClick: () => void;
 }) {
   return (
-    <div className="border-b border-gray-200 last:border-0">
+    <div className="border-b border-greige/20 last:border-0">
       <button
         onClick={onClick}
         className="w-full flex items-center justify-between py-6 text-left group"
       >
-        <span className="font-medium text-gray-900 group-hover:text-gray-700 transition-colors pr-4">
+        <span className="font-medium text-chocolate group-hover:text-chocolate/80 transition-colors pr-4">
           Q: {question}
         </span>
         <motion.div
@@ -82,7 +82,7 @@ function FAQItem({ question, answer, isOpen, onClick }: {
           transition={{ duration: 0.2 }}
           className="flex-shrink-0"
         >
-          <ChevronDown className="w-5 h-5 text-gray-500" />
+          <ChevronDown className="w-5 h-5 text-greige/80" />
         </motion.div>
       </button>
       <AnimatePresence>
@@ -94,7 +94,7 @@ function FAQItem({ question, answer, isOpen, onClick }: {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-gray-600 leading-relaxed">
+            <p className="pb-6 text-chocolate/70 leading-relaxed">
               <span className="font-semibold">A:</span>{answer}
             </p>
           </motion.div>
@@ -108,7 +108,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 lg:py-28 bg-white">
+    <section id="faq" className="py-20 lg:py-28 bg-cream">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -118,10 +118,10 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-chocolate mb-4">
             FAQ
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-chocolate/70">
             Answers to your most common questions
           </p>
         </motion.div>
