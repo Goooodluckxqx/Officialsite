@@ -6,8 +6,8 @@ import { ArrowRight, Check, Star, Shield, Sun, Thermometer, Eye, Package } from 
 import Link from "next/link";
 
 const colors = [
-  { id: "mist-purple", name: "Mist Purple", price: 40, className: "bg-purple-200" },
-  { id: "misty-blue", name: "Misty Blue", price: 40, className: "bg-blue-200" },
+  { id: "mist-purple", name: "Mist Purple", price: 40, className: "bg-lavender" },
+  { id: "misty-blue", name: "Misty Blue", price: 40, className: "bg-distantBlue" },
 ];
 
 const sets = [
@@ -53,16 +53,16 @@ export default function EyeMaskPage() {
   const currentPrice = selectedSet.price;
 
   return (
-    <main className="bg-white">
+    <main className="bg-cream">
       {/* Breadcrumb */}
-      <div className="bg-gray-50 border-b border-gray-100">
+      <div className="bg-oat/10 border-b border-greige/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <nav className="flex items-center gap-2 text-sm text-gray-500">
-            <Link href="/" className="hover:text-gray-900">Home</Link>
+          <nav className="flex items-center gap-2 text-sm text-greige/80">
+            <Link href="/" className="hover:text-chocolate">Home</Link>
             <span>/</span>
-            <Link href="/products" className="hover:text-gray-900">Products</Link>
+            <Link href="/products" className="hover:text-chocolate">Products</Link>
             <span>/</span>
-            <span className="text-gray-900 font-medium">Weighted Heated Eye Mask</span>
+            <span className="text-chocolate font-medium">Weighted Heated Eye Mask</span>
           </nav>
         </div>
       </div>
@@ -76,14 +76,14 @@ export default function EyeMaskPage() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="relative aspect-square rounded-2xl overflow-hidden bg-gray-50"
+              className="relative aspect-square rounded-2xl overflow-hidden bg-oat/10"
             >
               <img
                 src="/product-eyemask.jpg"
                 alt="NazzleNest Weighted Heated Eye Mask"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute top-4 left-4 bg-warm-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              <div className="absolute top-4 left-4 bg-milktea text-cream px-3 py-1 rounded-full text-sm font-semibold">
                 New Release
               </div>
             </motion.div>
@@ -94,14 +94,14 @@ export default function EyeMaskPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-warm-100 text-warm-700 rounded-full text-sm font-medium mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-oat/20 text-milktea-dark rounded-full text-sm font-medium mb-4">
                 <Thermometer className="w-4 h-4" />
                 Heat + Light Gravity
               </div>
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-4">
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-chocolate mb-4">
                 NazzleNest Weighted Heated Eye Mask
               </h1>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-lg text-chocolate/70 mb-6 leading-relaxed">
                 A bedtime tool for tired eyes. It blocks light, hugs the face with gentle weight, and adds a warm cassia-seed heat pack to help your eyes — and your nervous system — finally log off.
               </p>
 
@@ -109,15 +109,15 @@ export default function EyeMaskPage() {
               <div className="flex items-center gap-4 mb-8">
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-5 h-5 fill-amber text-amber" />
                   ))}
                 </div>
-                <span className="text-sm text-gray-600">4.9 · Soft, warm, and eye-pressure free</span>
+                <span className="text-sm text-chocolate/70">4.9 · Soft, warm, and eye-pressure free</span>
               </div>
 
               {/* Color Selector */}
               <div className="mb-6">
-                <span className="font-semibold text-gray-900 block mb-3">Color</span>
+                <span className="font-semibold text-chocolate block mb-3">Color</span>
                 <div className="flex gap-3">
                   {colors.map((color) => (
                     <button
@@ -125,12 +125,12 @@ export default function EyeMaskPage() {
                       onClick={() => setSelectedColor(color)}
                       className={`flex items-center gap-2 px-4 py-2 rounded-full border-2 transition-all ${
                         selectedColor.id === color.id
-                          ? "border-warm-600 bg-warm-50"
-                          : "border-gray-200 hover:border-gray-300"
+                          ? "border-milktea bg-oat/10"
+                          : "border-greige/20 hover:border-greige/30"
                       }`}
                     >
-                      <span className={`w-5 h-5 rounded-full ${color.className} border border-gray-300`} />
-                      <span className="text-sm font-medium text-gray-900">{color.name}</span>
+                      <span className={`w-5 h-5 rounded-full ${color.className} border border-greige/30`} />
+                      <span className="text-sm font-medium text-chocolate">{color.name}</span>
                     </button>
                   ))}
                 </div>
@@ -138,7 +138,7 @@ export default function EyeMaskPage() {
 
               {/* Set Selector */}
               <div className="mb-8">
-                <span className="font-semibold text-gray-900 block mb-3">Set</span>
+                <span className="font-semibold text-chocolate block mb-3">Set</span>
                 <div className="space-y-3">
                   {sets.map((set) => (
                     <button
@@ -146,15 +146,15 @@ export default function EyeMaskPage() {
                       onClick={() => setSelectedSet(set)}
                       className={`w-full flex items-center justify-between p-4 rounded-xl border-2 text-left transition-all ${
                         selectedSet.id === set.id
-                          ? "border-warm-600 bg-warm-50"
-                          : "border-gray-200 hover:border-gray-300"
+                          ? "border-milktea bg-oat/10"
+                          : "border-greige/20 hover:border-greige/30"
                       }`}
                     >
                       <div>
-                        <div className="font-bold text-gray-900">{set.name}</div>
-                        <div className="text-sm text-gray-600">{set.includes}</div>
+                        <div className="font-bold text-chocolate">{set.name}</div>
+                        <div className="text-sm text-chocolate/70">{set.includes}</div>
                       </div>
-                      <div className="font-bold text-warm-700">${set.price}</div>
+                      <div className="font-bold text-milktea-dark">${set.price}</div>
                     </button>
                   ))}
                 </div>
@@ -162,36 +162,36 @@ export default function EyeMaskPage() {
 
               {/* Price & CTA */}
               <div className="flex items-center gap-4 mb-8">
-                <span className="text-4xl font-bold text-gray-900">${currentPrice}</span>
-                <span className="text-gray-400 line-through">${currentPrice + 40}</span>
+                <span className="text-4xl font-bold text-chocolate">${currentPrice}</span>
+                <span className="text-greige line-through">${currentPrice + 40}</span>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button className="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 bg-warm-600 text-white font-medium rounded-full hover:bg-warm-700 transition-all">
+                <button className="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 bg-milktea text-cream font-medium rounded-full hover:bg-milktea-dark transition-all">
                   Add to Cart
                   <ArrowRight className="w-5 h-5" />
                 </button>
-                <button className="flex-1 inline-flex items-center justify-center px-8 py-4 border-2 border-gray-900 text-gray-900 font-medium rounded-full hover:bg-gray-900 hover:text-white transition-all">
+                <button className="flex-1 inline-flex items-center justify-center px-8 py-4 border-2 border-chocolate text-chocolate font-medium rounded-full hover:bg-chocolate hover:text-cream transition-all">
                   Buy Now
                 </button>
               </div>
 
               {/* Trust Badges */}
-              <div className="grid grid-cols-2 gap-4 text-sm text-gray-600">
+              <div className="grid grid-cols-2 gap-4 text-sm text-chocolate/70">
                 <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-warm-600" />
+                  <Check className="w-4 h-4 text-milktea" />
                   Free shipping
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-warm-600" />
+                  <Check className="w-4 h-4 text-milktea" />
                   30-day return
                 </div>
                 <div className="flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-warm-600" />
+                  <Shield className="w-4 h-4 text-milktea" />
                   Class A skin-contact fabric
                 </div>
                 <div className="flex items-center gap-2">
-                  <Thermometer className="w-4 h-4 text-warm-600" />
+                  <Thermometer className="w-4 h-4 text-milktea" />
                   Reusable heat pack
                 </div>
               </div>
@@ -201,7 +201,7 @@ export default function EyeMaskPage() {
       </section>
 
       {/* Features Grid */}
-      <section className="py-16 bg-warm-50">
+      <section className="py-16 bg-oat/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
@@ -211,11 +211,11 @@ export default function EyeMaskPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6"
+                className="bg-cream rounded-2xl p-6"
               >
-                <feature.icon className="w-8 h-8 text-warm-600 mb-4" />
-                <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-sm text-gray-600">{feature.desc}</p>
+                <feature.icon className="w-8 h-8 text-milktea mb-4" />
+                <h3 className="font-bold text-chocolate mb-2">{feature.title}</h3>
+                <p className="text-sm text-chocolate/70">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -225,7 +225,7 @@ export default function EyeMaskPage() {
       {/* Tabs: Layers / Specs / Care */}
       <section className="py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-2 mb-8 border-b border-gray-200">
+          <div className="flex gap-2 mb-8 border-b border-greige/20">
             {[
               { id: "layers", label: "Layer by Layer" },
               { id: "specs", label: "Specifications" },
@@ -236,8 +236,8 @@ export default function EyeMaskPage() {
                 onClick={() => setActiveTab(tab.id as typeof activeTab)}
                 className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${
                   activeTab === tab.id
-                    ? "border-warm-600 text-warm-600"
-                    : "border-transparent text-gray-500 hover:text-gray-700"
+                    ? "border-milktea text-milktea"
+                    : "border-transparent text-greige/80 hover:text-chocolate/80"
                 }`}
               >
                 {tab.label}
@@ -255,12 +255,12 @@ export default function EyeMaskPage() {
               <div className="space-y-6">
                 {layers.map((layer, index) => (
                   <div key={index} className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-warm-100 text-warm-700 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                    <div className="w-8 h-8 rounded-full bg-oat/20 text-milktea-dark flex items-center justify-center font-bold text-sm flex-shrink-0">
                       {index + 1}
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-1">{layer.title}</h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">{layer.content}</p>
+                      <h4 className="font-bold text-chocolate mb-1">{layer.title}</h4>
+                      <p className="text-chocolate/70 text-sm leading-relaxed">{layer.content}</p>
                     </div>
                   </div>
                 ))}
@@ -268,40 +268,40 @@ export default function EyeMaskPage() {
             )}
 
             {activeTab === "specs" && (
-              <div className="overflow-hidden rounded-2xl border border-gray-200">
+              <div className="overflow-hidden rounded-2xl border border-greige/20">
                 <table className="w-full text-sm">
-                  <tbody className="divide-y divide-gray-100">
-                    <tr className="bg-gray-50">
-                      <td className="px-6 py-4 font-medium text-gray-900">Product Set</td>
-                      <td className="px-6 py-4 text-gray-600">Eye mask + cassia seed heat pack + travel pouch</td>
+                  <tbody className="divide-y divide-greige/10">
+                    <tr className="bg-oat/10">
+                      <td className="px-6 py-4 font-medium text-chocolate">Product Set</td>
+                      <td className="px-6 py-4 text-chocolate/70">Eye mask + cassia seed heat pack + travel pouch</td>
                     </tr>
                     <tr>
-                      <td className="px-6 py-4 font-medium text-gray-900">Heat Pack Fill</td>
-                      <td className="px-6 py-4 text-gray-600">Roasted cassia seeds, ~100g</td>
+                      <td className="px-6 py-4 font-medium text-chocolate">Heat Pack Fill</td>
+                      <td className="px-6 py-4 text-chocolate/70">Roasted cassia seeds, ~100g</td>
                     </tr>
-                    <tr className="bg-gray-50">
-                      <td className="px-6 py-4 font-medium text-gray-900">Heat Pack Use</td>
-                      <td className="px-6 py-4 text-gray-600">Microwave ~1 min · Warmth lasts ~20 min</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 font-medium text-gray-900">Outer Shell</td>
-                      <td className="px-6 py-4 text-gray-600">90% nylon + 10% spandex</td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="px-6 py-4 font-medium text-gray-900">Skin Contact</td>
-                      <td className="px-6 py-4 text-gray-600">94% cotton + 6% spandex, sand-washed</td>
+                    <tr className="bg-oat/10">
+                      <td className="px-6 py-4 font-medium text-chocolate">Heat Pack Use</td>
+                      <td className="px-6 py-4 text-chocolate/70">Microwave ~1 min · Warmth lasts ~20 min</td>
                     </tr>
                     <tr>
-                      <td className="px-6 py-4 font-medium text-gray-900">Light Block</td>
-                      <td className="px-6 py-4 text-gray-600">100% polyester blackout fabric</td>
+                      <td className="px-6 py-4 font-medium text-chocolate">Outer Shell</td>
+                      <td className="px-6 py-4 text-chocolate/70">90% nylon + 10% spandex</td>
                     </tr>
-                    <tr className="bg-gray-50">
-                      <td className="px-6 py-4 font-medium text-gray-900">Cushion Layer</td>
-                      <td className="px-6 py-4 text-gray-600">55% silicone rubber + 45% polyurethane, eye-cavity cut</td>
+                    <tr className="bg-oat/10">
+                      <td className="px-6 py-4 font-medium text-chocolate">Skin Contact</td>
+                      <td className="px-6 py-4 text-chocolate/70">94% cotton + 6% spandex, sand-washed</td>
                     </tr>
                     <tr>
-                      <td className="px-6 py-4 font-medium text-gray-900">Colors</td>
-                      <td className="px-6 py-4 text-gray-600">Mist Purple · Misty Blue</td>
+                      <td className="px-6 py-4 font-medium text-chocolate">Light Block</td>
+                      <td className="px-6 py-4 text-chocolate/70">100% polyester blackout fabric</td>
+                    </tr>
+                    <tr className="bg-oat/10">
+                      <td className="px-6 py-4 font-medium text-chocolate">Cushion Layer</td>
+                      <td className="px-6 py-4 text-chocolate/70">55% silicone rubber + 45% polyurethane, eye-cavity cut</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 font-medium text-chocolate">Colors</td>
+                      <td className="px-6 py-4 text-chocolate/70">Mist Purple · Misty Blue</td>
                     </tr>
                   </tbody>
                 </table>
@@ -309,21 +309,21 @@ export default function EyeMaskPage() {
             )}
 
             {activeTab === "care" && (
-              <div className="space-y-4 text-gray-600">
+              <div className="space-y-4 text-chocolate/70">
                 <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <Check className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" />
                   <p><strong>Eye mask shell:</strong> Hand wash or gentle machine cycle in cold water. Air dry. Do not bleach or tumble dry.</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <Check className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" />
                   <p><strong>Cassia seed heat pack:</strong> Do not wash. Microwave only. Heat in 30-second intervals and check temperature before use to avoid overheating.</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <Check className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" />
                   <p>Store the heat pack in a dry place. Replace if the fabric shows wear or if seeds smell burnt.</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <Check className="w-5 h-5 text-sage flex-shrink-0 mt-0.5" />
                   <p>Always test warmth on the back of your hand before placing over eyes. Not a medical device.</p>
                 </div>
               </div>
@@ -333,13 +333,13 @@ export default function EyeMaskPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-16 bg-gray-900 text-white">
+      <section className="py-16 bg-chocolate text-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-4">
               How to Use
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-greige max-w-2xl mx-auto">
               A simple wind-down ritual for screen-tired eyes.
             </p>
           </div>
@@ -349,10 +349,10 @@ export default function EyeMaskPage() {
               { step: "02", title: "Slip It In", desc: "Place the warm pack into the eye mask's inner pocket. The weight settles gently over your eyes." },
               { step: "03", title: "Close Your Eyes", desc: "Lie back, block the light, and let the warmth and gentle pressure signal your body to relax." },
             ].map((item) => (
-              <div key={item.step} className="bg-gray-800 rounded-2xl p-8">
-                <div className="text-warm-400 font-bold text-5xl mb-4">{item.step}</div>
+              <div key={item.step} className="bg-chocolate-light rounded-2xl p-8">
+                <div className="text-milktea/80 font-bold text-5xl mb-4">{item.step}</div>
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-greige text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
