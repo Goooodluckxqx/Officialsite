@@ -33,7 +33,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased bg-white text-navy-900">
+      <body className="font-sans antialiased bg-cream text-chocolate">
         <Navbar />
         {children}
       </body>
